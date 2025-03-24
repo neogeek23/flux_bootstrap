@@ -29,7 +29,7 @@ spec:
             - name: DB_TYPE
               value: "postgres"
             - name: DB_HOST
-              value: "postgres.postgres.svc.cluster.local:5432"  # Adjust if needed; use full DNS if cross-namespace.
+              value: "postgres-service.postgres.svc.cluster.local:5432"
             - name: DB_NAME
               value: "gitea"
             - name: DB_USER
@@ -37,8 +37,8 @@ spec:
             - name: DB_PASS
               valueFrom:
                 secretKeyRef:
-                name: gitea-db-secret
-                key: password
+                  name: gitea-db-secret
+                  key: password
           volumeMounts:
             - name: gitea-data
               mountPath: /data
