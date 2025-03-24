@@ -6,7 +6,6 @@ metadata:
 spec:
   interval: 10m
   path: "./apps/production/gitea"
-  targetNamespace: gitea
   prune: true
   sourceRef:
     kind: GitRepository
