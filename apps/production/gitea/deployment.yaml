@@ -15,7 +15,7 @@ spec:
         app: gitea
     spec:
       nodeSelector:
-        role: worker
+        node-role.kubernetes.io/worker: "true"
       containers:
         - name: gitea
           image: gitea/gitea:1.23
