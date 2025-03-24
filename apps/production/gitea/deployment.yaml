@@ -9,6 +9,11 @@ spec:
   selector:
     matchLabels:
       app: gitea
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 0
   template:
     metadata:
       labels:
