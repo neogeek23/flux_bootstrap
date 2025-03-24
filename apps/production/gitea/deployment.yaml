@@ -26,6 +26,9 @@ spec:
           image: gitea/gitea:1.23
           ports:
             - containerPort: 3000
+              name: http
+            - containerPort: 2242
+              name: ssh
           env:
             - name: USER_UID
               value: "1000"
@@ -48,6 +51,10 @@ spec:
                 secretKeyRef:
                   name: gitea-db-secret
                   key: password
+            - name: START_SSH_SERVER
+              value: "true"
+            - name: SSH_PORT
+              value: "2242"
           volumeMounts:
             - name: gitea-data
               mountPath: /data
@@ -55,4 +62,3 @@ spec:
         - name: gitea-data
           persistentVolumeClaim:
             claimName: gitea-data
-
