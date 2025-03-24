@@ -24,6 +24,21 @@ spec:
               value: "1000"
             - name: USER_GID
               value: "1000"
+            - name: ROOT_URL
+              value: "https://scm.bstein.dev"
+            - name: DB_TYPE
+              value: "postgres"
+            - name: DB_HOST
+              value: "postgres.postgres.svc.cluster.local:5432"  # Adjust if needed; use full DNS if cross-namespace.
+            - name: DB_NAME
+              value: "gitea"
+            - name: DB_USER
+              value: "gitea"
+            - name: DB_PASS
+              valueFrom:
+                secretKeyRef:
+                name: gitea-db-secret
+                key: password
           volumeMounts:
             - name: gitea-data
               mountPath: /data
