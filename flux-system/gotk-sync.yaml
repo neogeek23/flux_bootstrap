@@ -12,6 +12,8 @@ spec:
   secretRef:
     name: flux-system
   url: ssh://git@scm.bstein.dev:2242/cronus/titan-iac.git
+  knownHostsSecretRef:
+    name: flux-system
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
