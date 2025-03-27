@@ -12,8 +12,6 @@ spec:
   secretRef:
     name: flux-system-gitea
   url: ssh://git@scm.bstein.dev:2242/cronus/titan-iac.git
-  knownHosts: | -
-    [scm.bstein.dev]:2242 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDpLuHeC2S+U07SE+sZoGdl4cj0YhIEohvxCHK7zhQic91c3PUBzvAAvRKhSrr6HsiVgFWIBNmoX8UPpfiDlXiI8UE9sBtQ+qmV9zwZJf2diemieOVref3MaTHJTEFp9jUkhS9cWCNXwCpOawbmYvmSET7GuG6cttrYkoiJnQkLT/o1MUTqu0KL5iN4z8aaamEkXH6rAWm73GuXWIY2e9i9ekNET265Xa8mO6qEfCJ9vn920PJcSKFTHfka0fpqpUaDmFQJPPBvMtCP1O/XAJHSXWZkYaMJRdT88dUvQDRURLyiIlayjWGtZefLAlW50iWiuf37CBrldOLi4+8daewR/Rd9WNDRyVgtcaN8UL4CAC7VktwmACa/kXetrLdPM0G//xvzK5c4H+crPkPW3MhBCCrMbnXQdrdFz6bIT302p2OnUDWWNnYzSbmkWWvP7yMf6iauyi7vHv+6+gK3FlQa7PK0DdQ9U6V+in1z1oSiCDbdfFqswUczAIZnqU4W9zk=
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
