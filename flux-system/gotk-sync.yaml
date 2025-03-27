@@ -10,10 +10,10 @@ spec:
   ref:
     branch: main
   secretRef:
-    name: flux-system
+    name: flux-system-gitea
   url: ssh://git@scm.bstein.dev:2242/cronus/titan-iac.git
   knownHostsSecretRef:
-    name: flux-system
+    name: flux-system-gitea
 ---
 apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
